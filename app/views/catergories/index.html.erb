@@ -1,4 +1,4 @@
-<h1>Categories</h1>
+<h2 style="color:#ffffff">Categories</h2>
 <% @categories.each do |category| %>
 	<li><%= link_to category.name, catergory_path(:id => category.id) %></li>
 <% end %>

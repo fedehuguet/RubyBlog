@@ -8,6 +8,7 @@ ActiveAdmin.register_page "Dashboard" do
                         column "Post title", :title do |post|
                             link_to post.title, [:admin,post]
                         end
+                        column "Author",:admin_user
                         column :category,:sortable => :category
                         column :created_at
                     end

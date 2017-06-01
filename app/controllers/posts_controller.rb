@@ -30,6 +30,8 @@ class PostsController < ApplicationController
 	end
 	def show
 		@post = Post.find(params[:id])
+		@user = AdminUser.all
+		@post_comment = PostComment.new(:post => @post)
 	end
 	def destroy
 		@post = Post.find(params[:id])

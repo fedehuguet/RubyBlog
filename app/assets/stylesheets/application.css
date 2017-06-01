@@ -257,6 +257,14 @@ a:hover {
 
 .links a {
 }
+/* Post Comment */
+
+.post input[type=submit] {
+	color:#fff;
+    background:#D43442; 
+    border:0 none;
+    cursor:pointer;
+}
 
 /* Sidebar */
 
