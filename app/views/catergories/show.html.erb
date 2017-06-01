@@ -1,8 +1,10 @@
-<h1><%= @category.name %></h1>
+<h2 style="color:#ffffff"><%= @category.name %></h2>
 <% if @posts.each do |post| %>
+<div class="post">
 	<h3><%= link_to post.title, post_path %></h3>
 	<p><%= post.body %></p>
+</div>
 <% end.empty? %>
-	<p>Sorry, no posts in category </p>
+	<p style="color:#ffffff">Sorry, no posts in category </p>
 <% end %>
 <%= link_to "Back to Categories", catergories_path %>

@@ -21,23 +21,17 @@
 						<li>
 							<h2>Categories</h2>
 							<ul>
-								<li><a href="#">Ruby Programming Language</a></li>
-                                                                <li><a href="#">Ruby on Rails Framework</a></li>
-								<li><a href="#">MVC Stuff</a></li>
-								<li><a href="#">Learn Linux</a></li>
-								<li><a href="#">Other Languages</a></li>
-					
+								<% all_categories.each do |cat| %>
+									<li><%= link_to cat.name,catergory_path(:id => cat.id) %></li>
+								<% end %>
 							</ul>
 						</li>
 						<li>
 							<h2>Blogroll</h2>
 							<ul>
-								<li><a href="#">Blog Post</a></li>
-								<li><a href="#">Blog Post</a></li>
-								<li><a href="#">Blog Post</a></li>
-								<li><a href="#">Blog Post</a></li>
-								<li><a href="#">Blog Post</a></li>
-								<li><a href="#">Blog Post</a></li>
+								<% all_posts.each do |post| %>
+									<li><%= link_to post.title,post_path(:id => post.id) %></li>
+								<% end %>
 							</ul>
 						</li>
 						
