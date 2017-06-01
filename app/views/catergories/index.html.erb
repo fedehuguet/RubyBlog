@@ -1,4 +1,8 @@
 <h2 style="color:#ffffff">Categories</h2>
-<% @categories.each do |category| %>
-	<li><%= link_to category.name, catergory_path(:id => category.id) %></li>
-<% end %>
+<div id="sidebar">
+	<ul>
+	<% @categories.each do |category| %>
+		<li><%= link_to category.name, catergory_path(:id => category.id) %></li>
+	<% end %>
+	</ul>
+</div>
