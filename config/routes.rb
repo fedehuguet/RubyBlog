@@ -1,10 +1,5 @@
 Rails.application.routes.draw do
   resources :post_comments
-  get 'pages/about'
-
-  get 'pages/contact'
-
-  get 'pages/resources'
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   root :to => "home#index"
